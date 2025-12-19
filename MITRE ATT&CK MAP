@@ -1,0 +1,111 @@
+WannaCry – MITRE ATT&CK Matrix with Defensive Mitigations
+This matrix maps WannaCry behaviors to MITRE ATT&CK tactics and techniques, alongside practical defensive controls used in SOC environments.
+
+T1204 – User Execution
+Technique ID: T1204
+Technique: User Execution
+Evidence: Wannacry.exe was manually executed from a user-accessible directory (Temp).
+Defensive Mitigations:
+Security awareness training
+Application allow-listing (AppLocker / WDAC)
+Block execution from user-writable directories
+
+T1059.003 – Windows Command Shell
+Technique ID: T1059.003
+Technique: Command and Scripting Interpreter: Windows Command Shell
+Evidence:
+Execution of .bat scripts via cmd.exe to automate malware operations.
+Defensive Mitigations:
+Command-line auditing and logging
+Restrict cmd.exe usage via Group Policy
+EDR alerts for suspicious command execution
+
+T1059.005 – Visual Basic
+Technique ID: T1059.005
+Technique: Command and Scripting Interpreter: Visual Basic
+Evidence:
+Use of cscript.exe to execute .vbs scripts.
+Defensive Mitigations:
+Disable Windows Script Host where not required
+Monitor script interpreter execution
+Restrict script execution via endpoint policies
+
+T1547.001 – Startup Folder / Run Keys
+Technique ID: T1547.001
+Technique: Boot or Logon Autostart Execution
+Evidence:
+Creation of startup-related artifacts referencing @WanaDecryptor@.exe.
+Defensive Mitigations:
+Monitor startup folders and registry Run keys
+Endpoint detection rules for persistence mechanisms
+
+T1222.001 – File and Directory Permissions Modification
+Technique ID: T1222.001
+Technique: File and Directory Permissions Modification
+Evidence:
+Execution of icacls.exe to grant Everyone:F permissions recursively.
+Defensive Mitigations:
+Alert on abnormal permission changes
+Enforce least-privilege access
+Monitor use of administrative utilities
+
+T1486 – Data Encrypted for Impact
+Technique ID: T1486
+Technique: Data Encrypted for Impact
+Evidence:
+Files encrypted and renamed with .WNCRY and .WNCRYT extensions.
+Defensive Mitigations:
+Ransomware behavior detection
+Offline and immutable backups
+Rapid isolation of infected hosts
+
+T1491.001 – Internal Defacement
+Technique ID: T1491.001
+Technique: Defacement: Internal
+Evidence:
+Deployment of ransom notes and execution of @WanaDecryptor@.exe.
+Defensive Mitigations:
+Monitor file creation in user directories
+Alert on unauthorized GUI execution
+EDR visual ransomware indicators
+
+T1490 – Inhibit System Recovery
+Technique ID: T1490
+Technique: Inhibit System Recovery
+Evidence:
+Permission and attribute changes designed to prevent file recovery.
+Defensive Mitigations:
+Protect backup configurations
+Alert on recovery inhibition behavior
+Enforce backup immutability
+
+
+T1564.001 – Hide Artifacts
+Technique ID: T1564.001
+Technique: Hide Artifacts: Hidden Files and Directories
+Evidence:
+Use of attrib.exe to mark files and directories as hidden.
+Defensive Mitigations:
+File integrity monitoring
+Alert on attribute changes
+EDR rules for artifact hiding
+
+T1082 – System Information Discovery
+Technique ID: T1082
+Technique: System Information Discovery
+Evidence:
+Collection of system metadata such as hostname, GUID, and language settings.
+Defensive Mitigations:
+Monitor system profiling activity
+Log registry and WMI queries
+Alert on suspicious information discovery
+
+T1005 – Data from Local System
+Technique ID: T1005
+Technique: Data from Local System
+Evidence:
+Targeting of documents, emails, images, and other user files prior to encryption.
+Defensive Mitigations:
+Data Loss Prevention (DLP) controls
+Alerts for bulk file access
+Endpoint behavior monitoring
