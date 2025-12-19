@@ -47,7 +47,16 @@ Cybersecurity Analyst
 Focus: Threat Detection, Malware Analysis, Blue Team Operations
 
 
+<img width="952" height="444" alt="Flare Vm" src="https://github.com/user-attachments/assets/e2f50ce3-94ca-4fe4-83cb-49ac4175fafb" />
+
+
+
+<img width="958" height="420" alt="IDA" src="https://github.com/user-attachments/assets/7c212e8a-18fc-4f1c-978a-77af3322d9e6" />
+
+
+
 [Malware analysis Wannacry.exe Malicious activity _ ANY.RUN - Malware Sandbox Online.pdf](https://github.com/user-attachments/files/24257805/Malware.analysis.Wannacry.exe.Malicious.activity._.ANY.RUN.-.Malware.Sandbox.Online.pdf)
+
 
 
 <img width="483" height="371" alt="Analysing Ransomware wannacry" src="https://github.com/user-attachments/assets/2d280c1a-a98d-4d2f-9a81-7795f216bfd4" />
