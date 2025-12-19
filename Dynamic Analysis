@@ -1,0 +1,13 @@
+# Dynamic Analysis of WannaCry (Wannacry.exe)
+
+Tool used: **ANY.RUN sandbox**
+
+## Observed Behavior
+- Executed from Temp directory: `C:\Users\admin\AppData\Local\Temp\Wannacry.exe`
+- **File System:** Enumerated Desktop, Documents, Outlook, OneNote; encrypted files (.WNCRY, .WNCRYT)
+- **Ransom Notes:** Dropped `@Please_Read_Me@.txt` and `@WanaDecryptor@.exe`; multiple languages
+- **Persistence:** Startup folder files, registry keys under `HKEY_CURRENT_USER\SOFTWARE\WanaCrypt0r`
+- **Automation:** Executed `.bat` via cmd.exe, `.vbs` via cscript.exe
+- **Permissions & Hiding:** Used `attrib.exe` and `icacls.exe` to hide files and set full access
+
+> Confirms real-time ransomware behavior, persistence, and victim interaction, validating static inferences.
