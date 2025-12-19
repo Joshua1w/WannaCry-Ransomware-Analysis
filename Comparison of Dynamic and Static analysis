@@ -1,0 +1,22 @@
+# Static vs Dynamic Analysis
+
+## Static Analysis Strengths
+- Reveals file parsing logic, conditional branches, PE structure
+- Safe, offline, no malware execution needed
+- Best for understanding internal design and IOCs
+
+## Dynamic Analysis Strengths
+- Confirms runtime behavior: encryption, ransom note deployment, persistence
+- Observes scripts, child processes, file modification
+- Best for impact verification and incident response
+
+## Comparison Summary
+| Aspect | Static | Dynamic |
+|--------|--------|---------|
+| File/Path Logic | ✔ | Inferred only |
+| Encryption | ❌ | ✔ |
+| Persistence | ❌ | ✔ |
+| Ransom GUI | ❌ | ✔ |
+| Safety | ✔ | ⚠ |
+
+> **Conclusion:** Both methods complement each other; static explains "how", dynamic confirms "what".
