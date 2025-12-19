@@ -1,0 +1,13 @@
+# Static Analysis of WannaCry (Wannacry.exe)
+
+Tools used: **file in powershell**, **Detect It Easy (DIE)**, **IDA Pro**
+
+## Findings
+- **File Type & Architecture:** 32-bit Windows PE (PE32), Intel x86 (i386), GUI-based.
+- **PE Sections:** .text, .rdata, .data, .rsrc; no packing detected.
+- **Entry Point & Structure:** Standard Windows startup; user-mode execution.
+- **Imports & APIs:** C runtime and Windows APIs (e.g., `strrchr`) for file path parsing.
+- **File Handling Logic:** Extracts filenames, validates paths, conditional execution (`test`, `jz`).
+- **Ransomware Indicators:** Bulk file enumeration, directory traversal logic, GUI execution.
+
+> Static analysis confirms structured malware logic and ransomware-like behavior without execution.
