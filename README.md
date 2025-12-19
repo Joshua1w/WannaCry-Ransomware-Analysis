@@ -45,3 +45,7 @@ Author:
 Joshua Adeleye
 Cybersecurity Analyst
 Focus: Threat Detection, Malware Analysis, Blue Team Operations
+[Malware analysis Wannacry.exe Malicious activity _ ANY.RUN - Malware Sandbox Online.pdf](https://github.com/user-attachments/files/24257805/Malware.analysis.Wannacry.exe.Malicious.activity._.ANY.RUN.-.Malware.Sandbox.Online.pdf)
+<img width="483" height="371" alt="Analysing Ransomware wannacry" src="https://github.com/user-attachments/assets/2d280c1a-a98d-4d2f-9a81-7795f216bfd4" />
+<img width="960" height="440" alt="Dynamic Malware Analysis using Any run" src="https://github.com/user-attachments/assets/32d73320-1b71-4406-a29e-a133d7129461" />
+<img width="960" height="539" alt="Host only set up " src="https://github.com/user-attachments/assets/a60cba78-6832-49d7-9f9d-a35b4080729e" />
